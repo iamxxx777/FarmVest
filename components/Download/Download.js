@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { ThemeContext } from '../themeContext'
 
 import Image from 'next/image'
+import Elipse from '../Elipse/Elipse'
 
 import styles from '../../styles/Download.module.scss'
 
@@ -34,6 +35,7 @@ const Download = () => {
                             />
                         </button>
                     </div>
+                    <Elipse styles={styles} />
                 </div>
             </div>
         </section>

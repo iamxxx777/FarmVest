@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../themeContext'
 
+import Elipse from '../Elipse/Elipse'
+
 import styles from '../../styles/Hero.module.scss'
 
 const Hero = () => {
@@ -36,6 +38,7 @@ const Hero = () => {
                         <div className={styles.brand}><img src={darkMode ? "/wired-dark.svg" : "/wired.svg"} alt="wired" /></div>
                     </div>
                 </div>
+                <Elipse styles={styles} />
             </div>
         </section>
     )

@@ -35,9 +35,9 @@ const Footer = () => {
                         <div className={styles.socials}>
                             <h2>Follow Us</h2>
                             <div className={styles.btns}>
-                                <button></button>
-                                <button></button>
-                                <button></button>
+                                <button><i className="uil uil-instagram"></i></button>
+                                <button><i className="uil uil-facebook-f"></i></button>
+                                <button><i className="uil uil-twitter-alt"></i></button>
                             </div>                           
                         </div>
                         <div className={styles.phone}>

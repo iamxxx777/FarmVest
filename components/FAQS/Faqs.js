@@ -2,6 +2,7 @@ import { useState, useContext } from 'react'
 import { ThemeContext } from '../themeContext'
 
 import Image from 'next/image'
+import Elipse from '../Elipse/Elipse'
 
 import styles from '../../styles/Faqs.module.scss'
 
@@ -84,6 +85,7 @@ const Faqs = () => {
                             layout='fill'
                         />
                     </div>
+                    <Elipse styles={styles} />
                 </div>
             </div>
         </section>

@@ -89,3 +89,23 @@
     background-color: transparent;
     border: none;
 }
+
+@mixin elipse {
+    position: absolute;
+    z-index: 5;
+    width: 250px;
+    height: 250px;       
+}
+
+@mixin elipse_div {
+    border-radius: 50%;
+    border: solid 0.5px $green;
+    width: 250px;
+    height: 250px;
+}
+
+@mixin elipse_first {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+}

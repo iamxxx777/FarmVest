@@ -10,6 +10,9 @@
         padding: $p-3 $p-2;
         background-color: $light-background-3;
         border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
         .center {
             .text {
                 margin-bottom: $p-2;
@@ -35,18 +38,62 @@
                 }
             }
         }
+        .elipse {
+            @include elipse;
+            height: 270px;
+            width: 275px;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+            div {
+                @include elipse_div;
+            }
+            .first {
+                @include elipse_first;
+                left: 0;
+                bottom: -15px;
+            }
+        }
     }
 }
 
 .darkmode {
     .container {
         background-color: $dark-background-2;
+        .elipse {
+            div {
+                border-color: $dark-text-3;
+            }
+        }
     }
 }
 
 @media (min-width: 500px) {
     .download {
         padding: $p-3 $p-2;
+    }
+}
+
+@media (min-width: 768px) {
+    .download {
+        .container {
+            .elipse {
+                height: 375px;
+                width: 375px;
+                div {
+                    width: 350px;
+                    height: 350px;
+                    position: absolute;
+                    bottom: -40px;
+                }
+                .first {
+                    bottom: -90px;
+                }
+            }
+        }
     }
 }
 

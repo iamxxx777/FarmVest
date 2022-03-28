@@ -7,21 +7,34 @@
     .container {
         @include section_container;
         .img {
+            @include flex_center;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             padding: $p-2 $p-1;
             background-color: $light-background-3;
             border-radius: 20px;
+            position: relative;
+            overflow: hidden;
             .img_container {
                 position: relative;
                 width: 100%;
                 height: 350px;
+                z-index: 2;
                 img {
                     object-fit: cover;
                     border-radius: 20px;
                     background-color: $light-background-2;
+                }
+            }
+            .elipse {
+                @include elipse;
+                bottom: -25px;
+                left: -80px;
+                z-index: 1;
+                div {
+                    @include elipse_div;
+                }
+                .first {
+                    @include elipse_first;
                 }
             }
         }
@@ -90,11 +103,15 @@
 }
 
 
-
 .darkmode {
     .container {
         .img {
             background-color: $dark-background-2;
+            .elipse {
+                div {
+                    border-color: $dark-text-3;
+                }
+            }
         }
 
         .info {
@@ -200,7 +217,15 @@
             .img {
                 height: fit-content;
                 padding: $p-4s $p-2;
-                
+                .elipse {
+                    width: 350px;
+                    height: 350px;
+                    bottom: -60px;
+                    div {
+                        width: 350px;
+                        height: 350px;
+                    }
+                }
             }
         }
     }
