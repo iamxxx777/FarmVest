@@ -20,7 +20,7 @@ const Faqs = () => {
     }
 
     return (
-        <section className={[styles.faqs, darkMode ? styles.darkmode : null].join(" ")}>
+        <section id="faqs" className={[styles.faqs, darkMode ? styles.darkmode : null].join(" ")}>
             <div className={styles.container}>
                 <div className={styles.info}>
                     <div className={styles.main_text}>

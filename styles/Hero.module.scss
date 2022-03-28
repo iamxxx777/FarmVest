@@ -18,7 +18,7 @@
             margin-bottom: $p-2;
             @include flex_column;
             .main_text {
-                margin-bottom: $p-1s;
+                margin-bottom: $p-2;
                 padding: 0 $p-sm;
                 h1 {
                     font: {
@@ -34,7 +34,7 @@
                 }
             }
             .sub_text {
-                margin-bottom: $p-1s;
+                margin-bottom: $p-2;
                 h2 {
                     font: {
                         size: $f-sm;
@@ -64,7 +64,7 @@
                     }
                     button {
                         @include button;
-                        @include btn($green-2);
+                        @include btn($green-2, $green-2);
                         color: $dark-text;
                         height: 45px;
                         width: 100%;
@@ -102,6 +102,12 @@
             }
             .first {
                 @include elipse_first;
+            }
+        }
+        .icons {
+            display: none;
+            div {
+                color: $light-text-3;
             }
         }
     }
@@ -283,7 +289,7 @@
             .hero_info {
                 max-width: 750px;
                 .main_text {
-                    padding: 0 $p-1;
+                    padding: 0 $p-3;
                     h1 {
                         font-size: $f-mega;
                         line-height: 60px;
@@ -308,6 +314,42 @@
                 top: -100px;
                 .first {
                     bottom: 40px;
+                }
+            }
+            .icons {
+                display: initial;
+                div {
+                    position: absolute;
+                    color: inherit;
+                    font-size: 22px;
+                }
+                .naira {
+                    top: 180px;
+                    right: 60px;
+                }
+                .bag {
+                    top: 80px;
+                    right: 400px;
+                }
+                .star {
+                    top: 470px;
+                    right: 250px;
+                }
+                .star_filled {
+                    top: 180px;
+                    left: 200px;
+                }
+                .dollar {
+                    top: 350px;
+                    left: 15px;
+                }
+                .circle {
+                    bottom: 170px;
+                    left: 250px;
+                }
+                .circle_filled {
+                    top: 230px;
+                    right: 200px;
                 }
             }
         }

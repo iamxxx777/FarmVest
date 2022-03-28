@@ -92,6 +92,8 @@
                             border-radius: 50%;
                             background-color: $green-2;
                             margin-right: $p-1;
+                            transform: rotateY(0);
+                            transition: 0.4s linear;
                             i {
                                 color: $dark-text;
                                 font-size: 20px;
@@ -216,6 +218,21 @@
                             }
                             button {
                                 width: 120px;
+                                &:hover {
+                                    background-color: $green-shade;
+                                    color: $green;
+                                }
+                            }
+                        }
+                    }
+                }
+                .contact {
+                    .socials {
+                        .btns {
+                            button {
+                                &:hover {
+                                    transform: rotateY(180deg);
+                                } 
                             }
                         }
                     }

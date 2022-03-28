@@ -2,6 +2,13 @@ import { useContext } from 'react'
 import { ThemeContext } from '../themeContext'
 
 import Elipse from '../Elipse/Elipse'
+import Star from '../Icons/Star'
+import Star2 from '../Icons/Star2'
+import Naira from '../Icons/Naira'
+import Circle from '../Icons/Circle'
+import Dollar from '../Icons/Dollar'
+import MoneyBag from '../Icons/MoneyBag'
+import CircleFilled from '../Icons/CircleFilled'
 
 import styles from '../../styles/Hero.module.scss'
 
@@ -10,7 +17,7 @@ const Hero = () => {
     const { darkMode } = useContext(ThemeContext)
 
     return (
-        <section className={[styles.hero, darkMode ? styles.darkmode : null].join(" ")}>
+        <section id="home" className={[styles.hero, darkMode ? styles.darkmode : null].join(" ")}>
             <div className={styles.hero_container}>
                 <div className={styles.hero_info}>
                     <div className={styles.main_text}>
@@ -39,6 +46,15 @@ const Hero = () => {
                     </div>
                 </div>
                 <Elipse styles={styles} />
+                <div className={styles.icons}>
+                    <Star styles={styles} />
+                    <Star2 styles={styles} />
+                    <Naira styles={styles} />
+                    <Dollar styles={styles} />
+                    <Circle styles={styles} />
+                    <CircleFilled styles={styles} />
+                    <MoneyBag styles={styles} />
+                </div>
             </div>
         </section>
     )

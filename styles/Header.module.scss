@@ -3,18 +3,17 @@
 
 .header {
     width: 100%;
-    background-color: $light-background;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 3;
+    background-color: $light-background;
     .header_container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 1250px;
         margin: 0 auto;
-        position: relative;
         .logo {
             h2 {
                 font: {
@@ -44,6 +43,7 @@
             .mb_btn {
                 font-size: $f-xl;
             }
+            
             .mb_hide_i,
             .mb_hide_ii {
                 display: none;
@@ -52,17 +52,22 @@
         .dropdown {
             @include flex_column;
             position: absolute;
-            width: 99.5%;
-            top: 60px;
+            width: 100%;
+            top: 65px;
             left: 0;
-            border: $dark-border;
+            box-shadow: 0 1px 3px -1px gray;
+            background-color: $light-background;
+            z-index: 3;
             display: none;
             button {
                 @include button;
                 text-align: left;
                 width: 100%;
-                padding: $p-sm;
-                font-size: $f-sm;
+                padding: $p-1 $p-1s;
+                font-size: $f-md;
+                a {
+                    color: $light-text;
+                }
             }
         }
         .drop_show {
@@ -73,6 +78,7 @@
 
 .scroll {
     padding: $p-1;
+    position: relative;
 }
 
 .scrolled {
@@ -83,6 +89,19 @@
     background-color: $dark-background;
     .scrolled {
         box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.2);
+    }
+    .scroll {
+        .header_container {
+            .dropdown {
+                background-color: $dark-background;
+                box-shadow: 0 1px 4px -1px $light-background-2;
+                button {
+                    a {
+                        color: $dark-text;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -103,8 +122,10 @@
                     @include button;
                     margin-right: $p-1s;
                     font-family: $family-1;
-                    &:hover {
-                        color: $green-2;
+                    a {
+                        &:hover {
+                            color: $green;
+                        }
                     }
                 }
             }

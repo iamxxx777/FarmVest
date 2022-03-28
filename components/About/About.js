@@ -11,7 +11,7 @@ const About = () => {
     const { darkMode } = useContext(ThemeContext)
 
     return (
-        <section className={[styles.about, darkMode ? styles.darkmode : null].join(" ")}>
+        <section id="about" className={[styles.about, darkMode ? styles.darkmode : null].join(" ")}>
             <div className={styles.container}>
                 <div className={styles.about_info}>
                     <div className={styles.main_text}>

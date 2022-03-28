@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext } from 'react'
 import { ThemeContext } from '../themeContext'
 
+import Link from 'next/link'
+
 import styles from '../../styles/Header.module.scss'
 
 const Header = () => {
@@ -29,13 +31,17 @@ const Header = () => {
             <div className={[styles.scroll, scrolled ? styles.scrolled : null].join(" ")}>
                 <div className={styles.header_container}>
                     <div className={styles.logo}>
-                        <h2>FarmVest</h2>
+                        <buton>
+                        <Link href="#home">
+                            <h2>FarmVest</h2>
+                        </Link>
+                        </buton>
                     </div>
                     <nav className={styles.links}>
-                        <button>Home</button>
-                        <button>About</button>
-                        <button>Features</button>
-                        <button>How it works</button>
+                        <button><Link href='#home'>Home</Link></button>
+                        <button><Link href='#about'>About</Link></button>
+                        <button><Link href='#features'>Features</Link></button>
+                        <button><Link href='#faqs'>How it works</Link></button>
                     </nav>
                     <div className={styles.buttons}>
                         <button className={styles.darkmode_toggle} onClick={setLocalTheme}>{darkMode ? <i className="uil uil-brightness-empty"></i> : <i class="uil uil-bright"></i>}</button>
@@ -46,10 +52,10 @@ const Header = () => {
                         </button>
                     </div>
                     <div className={[styles.dropdown, drop ? styles.drop_show : null].join(" ")}>
-                        <button>Home</button>
-                        <button>About</button>
-                        <button>Features</button>
-                        <button>How it works</button>
+                        <button><Link href='#home'>Home</Link></button>
+                        <button><Link href='#about'>About</Link></button>
+                        <button><Link href='#features'>Features</Link></button>
+                        <button><Link href='#faqs'>How it works</Link></button>
                     </div>
                 </div>
             </div>

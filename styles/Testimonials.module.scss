@@ -167,12 +167,13 @@
                         line-height: 22px;
                     }
                 }
-                .btn {
-                    button {
-                        &:hover {
-                            background-color: $green-shade;
-                            border-color: $green-2;
-                        }
+            }
+            .btn {
+                button {
+                    &:hover {
+                        background-color: $green-shade;
+                        border-color: $green-2;
+                        color: $green;
                     }
                 }
             }

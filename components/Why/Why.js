@@ -10,7 +10,7 @@ const Why = () => {
     const { darkMode } = useContext(ThemeContext)
 
     return (
-        <section className={[styles.why, darkMode ? styles.darkmode : null].join(" ")}>
+        <section id="features" className={[styles.why, darkMode ? styles.darkmode : null].join(" ")}>
             <div className={styles.container}>
                 <div className={styles.info}>
                     <div className={styles.main_text}>
