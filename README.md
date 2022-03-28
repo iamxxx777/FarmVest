@@ -1,33 +1,32 @@
 <h1 align="center">FarmVest</h1>
 
 
-<!-- <div align="center">
+<div align="center">
   <h3>
-    <a href="https://tick-talk.herokuapp.com">
+    <a href="https://farmvest.vercel.app">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/iamxxx777/tick-talk">
-      Solution
+    <a href="https://github.com/iamxxx777/FarmVest">
+      Code
     </a>
   </h3>
-</div> -->
+</div>
 
-## Getting Started
+## Overview
+![screenshot](https://res.cloudinary.com/hopetomiwa/image/upload/v1648485949/samples/people/FarmVest-dark_pmdn6d.png)
 
+![screenshot](https://res.cloudinary.com/hopetomiwa/image/upload/v1648485949/samples/people/FarmVest-white_regdmi.png)
 
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+FarmVest is a one page template for a fictional company that allows users to invest wisely in the agricultural sector. This app was built with next.js and the css is written from scratch with no frameworks. This app features a darkmode and a lightmode to enable the best user experience and it is fully responsive.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Some of the icons used in this app can be found on iconscout.com and the rest are avaialable in the public folder of this app.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- GitHub [@iamxxx777](https://github.com/iamxxx777)
+- Twitter [@dayo_hope](https://twitter.com/dayo_hope)
+- Website [hopetomiwa](https://hopetomiwa.vercel.app)
