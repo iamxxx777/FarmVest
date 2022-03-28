@@ -1,0 +1,212 @@
+@import './mixins.module.scss';
+@import './theme.module.scss';
+
+
+.why {
+    @include section;
+    @include flex_center;
+    .container {
+        @include section_container;
+        .info {
+            width: 100%;
+            .main_text {
+                margin-bottom: $p-1;
+                h2 {
+                    font: {
+                        size: $f-xl;
+                        weight: 700;
+                    }
+                    text-transform: capitalize;
+                    line-height: 38px;
+                    span {
+                        color: $green;
+                    }
+                }
+            }
+            .sub_text {
+                margin-bottom: $p-2;
+                p {
+                    font-size: $f-s;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+            .points {
+                width: 100%;
+                margin-bottom: $p-2s;
+                .point {
+                    @include flex_left;
+                    margin-bottom: $p-1s;
+                    .num {
+                        background-color: $green-shade;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        margin-right: $p-1s;
+                        @include flex_center;
+                        p {
+                            font-size: $f-md;
+                            font-weight: 700;
+                            color: $green-2;
+                        }
+                    }
+                    .text {
+                        p {
+                            font-size: $f-s;
+                        }
+                    }
+                }
+            }
+            .btn {
+                width: 100%;
+                @include flex_left;
+                button {
+                    @include button;
+                    background-color: $green-2;
+                    padding: $p-1 $p-1s;
+                    border-radius: 7px;
+                    font-weight: 600;
+                    color: $dark-text;
+                    border: solid 1px transparent;
+                }
+            }
+        }
+        .img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: $p-1;
+            .img_container {
+                position: relative;
+                width: 100%;
+                height: 350px;
+                img {
+                    object-fit: cover;
+                    border-radius: 20px;
+                    background-color: $light-background-2;
+                }
+            }
+        }
+    }
+}
+
+
+
+.darkmode {
+    .container {
+        .info {
+            .points {
+                .point {
+                    .num {
+                        background-color: $dark-background-2;
+                        p {
+                            color: $dark-text;
+                        }
+                    }
+                }
+            }
+            .btn {
+                button {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 500px) {
+    .why {
+        padding: $p-3 $p-2;
+        .container {
+            .img {
+                padding: $p-2s $p-2;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    .why {
+        .container {
+            .info {
+                .sub_text {
+                    p {
+                        font-size: $f-sm;
+                        line-height: 22px;
+                    }
+                }
+                .points {
+                    .point {
+                        .num {
+                            width: 45px;
+                            height: 45px;
+                        }
+                        .text {
+                            p {
+                                font-size: $f-sm;
+                            }
+                        }
+                    }
+                }
+                .btn {
+                    button {
+                        &:hover {
+                            background-color: $green-shade;
+                            border-color: $green-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .why {
+        padding: $p-5 $p-2;
+        .container {
+            max-width: 1100px;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 4rem;
+            .info {
+                .main_text {
+                    h2 {
+                        font-size: $f-xxl;
+                        line-height: 45px;
+                    }
+                }
+                .sub_text {
+                    p {
+                        font-size: $f-md;
+                        line-height: 26px;
+                    }
+                }
+                .points {
+                    .point {
+                        .text {
+                            p {
+                                font-size: $f-md;
+                            }
+                        }
+                    }
+                }
+                .btn {
+                    button {
+                        font-size: $f-md-2;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .img {
+                .img_container {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

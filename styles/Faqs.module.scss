@@ -1,0 +1,207 @@
+@import './mixins.module.scss';
+@import './theme.module.scss';
+
+.faqs {
+    @include section;
+    @include flex_center;
+    .container {
+        @include section_container;
+        .img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: $p-2 $p-1;
+            background-color: $light-background-3;
+            border-radius: 20px;
+            .img_container {
+                position: relative;
+                width: 100%;
+                height: 350px;
+                img {
+                    object-fit: cover;
+                    border-radius: 20px;
+                    background-color: $light-background-2;
+                }
+            }
+        }
+        .info {
+            width: 100%;
+            .main_text {
+                margin-bottom: $p-1;
+                h2 {
+                    font: {
+                        size: $f-xl;
+                        weight: 700;
+                    }
+                    text-transform: capitalize;
+                    line-height: 38px;
+                    span {
+                        color: $green;
+                    }
+                }
+            }
+            .sub_text {
+                margin-bottom: $p-2;
+                p {
+                    font-size: $f-s;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+            .questions {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+                .question {
+                    width: 100%;
+                    .head {
+                        @include flex_btw;
+                        background-color: $light-background-3;
+                        padding: $p-sm $p-1;
+                        border-radius: 10px;
+                        p {
+                            font-size: $f-s;
+                            font-weight: 400;
+                        }
+                        button {
+                            @include button;
+                            color: $green;
+                            font-size: $f-xl;
+                            transform: rotate(-90deg);
+                            transition: 0.4s linear;
+                        }
+                        .active {
+                            transform: rotate(0);
+                        } 
+                    }
+                    .answer {
+                        padding: $p-1;
+                        p {
+                            font-size: $f-xs;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.darkmode {
+    .container {
+        .img {
+            background-color: $dark-background-2;
+        }
+
+        .info {
+            .sub_text {
+                h2 {
+                    color: $dark-text-2;
+                }
+            }
+            .questions {
+                .question {
+                    .head {
+                        background-color: $dark-background-2;
+                    }
+                    .answer {
+                        p {
+                            color: $dark-text-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 500px) {
+    .faqs {
+        padding: $p-3 $p-2;
+        .container {
+            .img {
+                padding: $p-2s $p-2;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .faqs {
+        .container {
+            .info {
+                .sub_text {
+                    p {
+                        font-size: $f-sm;
+                        line-height: 24px;
+                    }
+                }
+                .questions {
+                    .question {
+                        .head {
+                            padding: $p-1;
+                            p {
+                                font-size: $f-sm;
+                            }
+                            
+                        }
+                        .answer {
+                            p {
+                                font-size: $f-sm;
+                                line-height: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .faqs {
+        padding: $p-5 $p-2;
+        .container {
+            max-width: 1100px;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 4rem;
+            .info {
+                order: 1;
+                .main_text {
+                    h2 {
+                        font-size: $f-xxl;
+                    }
+                }
+                .sub_text {
+                    p {
+                        font-size: $f-md;
+                        line-height: 27px;
+                    }
+                }
+                .questions {
+                    .question {
+                        .head {
+                            padding: $p-sm $p-1;
+                            p {
+                                font-size: $f-md;
+                            }
+                            button {
+                                font-size: $f-xxl;
+                            }
+                        }
+                    }
+                }
+            }
+            .img {
+                height: fit-content;
+                padding: $p-4s $p-2;
+                
+            }
+        }
+    }
+}

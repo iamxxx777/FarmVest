@@ -1,0 +1,236 @@
+@import './mixins.module.scss';
+@import './theme.module.scss';
+
+
+.testimonials {
+    @include section;
+    @include flex_center;
+    .container {
+        @include section_container;
+        max-width: 1000px;
+        .info {
+            width: 100%;
+            margin-bottom: $p-2;
+            .main_text {
+                margin-bottom: $p-1;
+                h2 {
+                    font: {
+                        size: $f-xl;
+                        weight: 700;
+                    }
+                    text-transform: capitalize;
+                    text-align: center;
+                    line-height: 38px;
+                    span {
+                        color: $green;
+                    }
+                }
+            }
+            .sub_text {
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                p {
+                    font-size: $f-s;
+                    font-weight: 400;
+                    line-height: 20px;
+                    text-align: center;
+                }
+            }
+        }
+        .images {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            padding: 0 $p-1;
+            .testimonial {
+                width: 100%;
+                background-color: $light-background-3;
+                border-radius: 20px;
+                display: grid;
+                grid-template-columns: 1fr;
+                .img {
+                    width: 100%;
+                    height: 200px;
+                    position: relative;
+                    img {
+                        object-fit: cover;
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                    }
+                }
+                .info {
+                    padding: $p-1;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    p {
+                        font-size: $f-s;
+                        font-weight: 400;
+                        line-height: 19px;
+                    }
+                    h3 {
+                        font-size: $f-s;
+                        font-weight: 700;
+                        text-align: left;
+                    }
+                }
+                
+            }
+        }
+        .btn {
+            width: 100%;
+            @include flex_center;
+            button {
+                @include button;
+                background-color: $green-2;
+                padding: $p-1 $p-2;
+                border-radius: 7px;
+                font-weight: 600;
+                color: $dark-text;
+                border: solid 1px transparent;
+            }
+        }
+    }
+}
+
+
+.darkmode {
+    .container {
+        .images {
+            .testimonial {
+                background-color: $dark-background-2;
+            }
+        }
+        .btn {
+            button {
+                background-color: $green;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 500px) {
+    .testimonials {
+        padding: $p-3 $p-2;
+        .container {
+            .images {
+                padding: 0;
+                .testimonial {
+                    grid-template-columns: 1fr 1.2fr;
+                    height: 250px;
+                    .img {
+                        height: 100%;
+                        img {
+                            border-top-right-radius: 0;
+                            border-bottom-left-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .testimonials {
+        .container {
+            .images {
+                grid-template-columns: 1fr 1fr;
+                .testimonial {
+                    grid-template-columns: 1fr;
+                    height: auto;
+                    .img {
+                        width: 100%;
+                        height: 200px;
+                        img {
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .testimonials {
+        .container {
+            .info {
+                .sub_text {
+                    p {
+                        font-size: $f-sm;
+                        line-height: 22px;
+                    }
+                }
+                .btn {
+                    button {
+                        &:hover {
+                            background-color: $green-shade;
+                            border-color: $green-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 850px) {
+    .testimonials {
+        .container {
+            .images {
+                .testimonial {
+                    grid-template-columns: 1fr 1.3fr;
+                    height: 250px;
+                    .img {
+                        height: 100%;
+                        img {
+                            border-top-left-radius: 20px;
+                            border-top-right-radius: 0;
+                            border-bottom-left-radius: 20px;
+                        }
+                    }
+                    .info {
+                        p {
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonials {
+        padding: $p-5 $p-2;
+        .container {
+            max-width: 1100px;
+            .info {
+                margin-bottom: $p-1;
+                .main_text {
+                    h2 {
+                        font-size: $f-xxl;
+                        line-height: 45px;
+                    }
+                }
+                .sub_text {
+                    p {
+                        font-size: $f-md;
+                        line-height: 26px;
+                    }
+                }
+                .btn {
+                    button {
+                        font-size: $f-md-2;
+                    }
+                }
+            }
+        }
+    }
+}

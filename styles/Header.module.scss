@@ -1,0 +1,176 @@
+@import './mixins.module.scss';
+@import './theme.module.scss';
+
+.header {
+    width: 100%;
+    background-color: $light-background;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    .header_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1250px;
+        margin: 0 auto;
+        position: relative;
+        .logo {
+            h2 {
+                font: {
+                    size: $f-xl;
+                    family: 'Leckerli One', cursive;
+                    weight: 400;
+                }
+                text-align: left;
+            }
+        }
+        .links {
+            display: none;
+            button {
+                @include button;
+                font-size: $f-sm;
+                margin-right: $p-sm;
+                border: none;
+            }
+        }
+        .buttons {
+            @include flex-right;
+            button {
+                @include button;
+                margin-left: $p-sm;
+            }
+            .darkmode_toggle,
+            .mb_btn {
+                font-size: $f-xl;
+            }
+            .mb_hide_i,
+            .mb_hide_ii {
+                display: none;
+            }
+        }
+        .dropdown {
+            @include flex_column;
+            position: absolute;
+            width: 99.5%;
+            top: 60px;
+            left: 0;
+            border: $dark-border;
+            display: none;
+            button {
+                @include button;
+                text-align: left;
+                width: 100%;
+                padding: $p-sm;
+                font-size: $f-sm;
+            }
+        }
+        .drop_show {
+            display: flex;
+        }
+    }
+}
+
+.scroll {
+    padding: $p-1;
+}
+
+.scrolled {
+    box-shadow: 0 0 7px 0 $light-background-2;
+}
+
+.darkmode {
+    background-color: $dark-background;
+    .scrolled {
+        box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.2);
+    }
+}
+
+
+@media (min-width: 850px) {
+    .header {
+        .header_container {
+            .logo {
+                h2 {
+                    font: {
+                        size: $f-xl;
+                    }
+                }
+            }
+            .links {
+                @include flex_center;
+                button {
+                    @include button;
+                    margin-right: $p-1s;
+                    font-family: $family-1;
+                    &:hover {
+                        color: $green-2;
+                    }
+                }
+            }
+            .buttons {
+                @include flex-right;
+                .darkmode_toggle {
+                    font-size: $f-xxl;
+                }
+                .mb_btn {
+                    display: none;
+                }
+                .mb_hide_i {
+                    display: initial;
+                    @include btn($dark-background);
+                    width: 120px;
+                    height: 50px;
+                    &:hover {
+                        border-color: $green;
+                        color: $green;
+                    }
+                }
+                .mb_hide_ii {
+                    display: initial;
+                    @include btn($green-2, $green-2);
+                    width: 120px;
+                    height: 50px;
+                    color: $dark-text;
+                    &:hover {
+                        background-color: $green-shade;
+                        color: $green;
+                    }
+                }
+            }
+            .drop_show {
+                display: none;
+            }
+        }
+    }
+
+    .scroll {
+        padding: $p-1 $p-1s;
+    }
+
+    .darkmode {
+        .header_container {
+            .buttons {
+                .mb_hide_i {
+                    border-color: $light-background;
+                }
+                .mb_hide_ii {
+                    background-color: $green;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .header {
+        .header_container {
+            .buttons {
+                button {
+                    margin-left: 0.8rem;
+                }
+            }
+        }
+    }
+}

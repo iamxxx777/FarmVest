@@ -1,0 +1,91 @@
+@import './theme.module.scss';
+
+@mixin container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+@mixin section {
+    width: 100%;
+    padding: $p-3 $p-1;
+    position: relative;
+}
+
+@mixin section_container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_btw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex_top_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@mixin flex_top_right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@mixin flex_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@mixin flex_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@mixin flex_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex_column_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+@mixin btn($n, $m: transparent) {
+    width: 122px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 1px $n;
+    background-color: $m;
+    padding: $p-sm;
+}
+
+@mixin button {
+    outline: none;
+    cursor: pointer;
+    color: inherit;
+    font-family: $family-2;
+    font-size: $f-md;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+}

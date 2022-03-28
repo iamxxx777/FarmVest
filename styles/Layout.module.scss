@@ -1,0 +1,18 @@
+@import './theme.module.scss';
+@import './mixins.module.scss';
+
+.layout {
+    width: 100%;
+    min-height: 100vh;
+    background-color: $light-background;
+    color: $light-text;
+}
+
+.container {
+    @include container;
+}
+
+.darkmode {
+    background-color: $dark-background;
+    color: $dark-text;
+}

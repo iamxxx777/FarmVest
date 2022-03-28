@@ -1,0 +1,281 @@
+@import './mixins.module.scss';
+@import './theme.module.scss';
+
+.footer {
+    @include section;
+    background-color: $light-background-4;
+    margin-top: $p-1s;
+    .container {
+        max-width: 1250px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        .top {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            .text {
+                margin-bottom: $p-1;
+                h2 {
+                    font: {
+                        size: $f-md-2;
+                        family: 'Leckerli One', cursive;
+                        weight: 400;
+                    }
+                    text-align: left;
+                    margin-bottom: $p-sm;
+                }
+                p {
+                    font-size: $f-s;
+                    line-height: 19px;
+                }
+            }
+            .subscribe {
+                margin-bottom: $p-1;
+                p {
+                    font-size: $f-s;
+                    line-height: 19px;
+                    margin-bottom: $p-1;
+                }
+                .form {
+                    form {
+                        height: 50px;
+                        height: 50px;
+                        background: $dark-background-shade;
+                        border: none;
+                        padding: 0.2rem;
+                        border-radius: 10px;
+                        padding: 0.3rem;
+                        @include flex_left;
+                        input {
+                            width: calc(100% - 90px);
+                            height: 100%;
+                            font-size: $f-sm;
+                            margin-bottom: 0;
+                            padding: $p-sm $p-1;
+                            background-color: transparent;
+                            border: none;
+                            border-radius: 10px;
+                            outline: none;
+                        }
+                        button {
+                            @include button;
+                            @include btn($green-2, $green-2);
+                            color: $dark-text;
+                            height: 100%;
+                            width: 90px;
+                            border-radius: 10px;
+                            font-size: $f-md;
+                            font-weight: 600;
+                            font-family: $family-2;
+                            padding: $p-sm;
+                        }
+                    }
+                }
+            }
+            .contact {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0.7rem;
+                .socials {
+                    margin-bottom: $p-1;
+                    h2 {
+                        font-size: $f-s;
+                        margin-bottom: $p-1;
+                    }
+                    .btns {
+                        @include flex_left;
+                        button {
+                            @include button;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: $green-2;
+                            margin-right: $p-1;
+                            i {
+                                color: $dark-text;
+                            }
+                        }
+                    }
+                }
+                .phone {
+                    h2 {
+                        font-size: $f-s;
+                        margin-bottom: $p-1;
+                    }
+                    .num {
+                        p {
+                            font-size: $f-xs;
+                        }
+                    }
+                }
+            }
+        }
+        .bottom {
+            border-top: 1px solid rgba(38, 50, 56, 0.31);
+            padding-top: $p-1s;
+            @include flex_column;
+            .copywrite {
+                margin-bottom: $p-1;
+                p {
+                    font-size: $f-xs;
+                    font-family: $family-2;
+                    text-align: center;
+                    color: $light-text-2;
+                }
+            }
+            .links {
+                @include flex_center;
+                flex-wrap: wrap;
+                button {
+                    @include button;
+                    margin-right: $p-1;
+                    margin-bottom: $p-sm;
+                    font-size: $f-xs;
+                    color: $light-text-2;
+                }
+            }
+        }
+    }
+}
+
+.darkmode {
+    background-color: $dark-background-3;
+    .container {
+        .top {
+            .subscribe {
+                .form {
+                    form {
+                        background-color: $light-background;
+                        button {
+                            background-color: $green;
+                            border-color: $green;
+                        }
+                    }
+                }
+            }
+            .contact {
+                .socials {
+                    .btns {
+                        button {
+                            background-color: $light-background;
+                            i {
+                                color: $green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bottom {
+            border-top: 1px solid $dark-text-2;
+            .copywrite {
+                p {
+                    color: $dark-text-2;
+                }
+            }
+            .links {
+                button {
+                    color: $dark-text-2;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .footer {
+        padding: $p-3 $p-1s;
+        .container {
+            .top {
+                .contact {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) {
+    .footer {
+        padding: $p-3;
+        .container {
+            .top {
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                .subscribe {
+                    padding-top: $p-1s;
+                    .form {
+                        form {
+                            height: 60px;
+                            input {
+                                width: calc(100% - 120px)
+                            }
+                            button {
+                                width: 120px;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom {
+                @include flex_btw;
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1100px) {
+    .footer {
+        .container {
+            .top {
+                grid-template-columns: 1fr 1fr 0.7fr;
+                gap: 2rem;
+                justify-content: center;
+                .text {
+                    h2 {
+                        font-size: $f-lg;
+                    }
+                    p {
+                        font-size: $f-s;
+                    }
+                }
+                .subscribe {
+                    padding-top: $p-1s;
+                    p {
+                        font-size: $f-s;
+                    }
+                }
+                .contact {
+                    padding-top: $p-1s;
+                    .phone {
+                        .num {
+                            p {
+                                font-size: $f-s;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom {
+                .copywrite {
+                    p {
+                        font-size: $f-s;
+                        font-weight: 600;
+                    }
+                }
+                .links {
+                    button {
+                        font-size: $f-s;
+                        font-weight: 600;
+                    }
+                }
+            }
+            
+        }
+    }
+}

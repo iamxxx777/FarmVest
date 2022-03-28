@@ -1,0 +1,269 @@
+@import './mixins.module.scss';
+@import './theme.module.scss';
+
+.hero {
+    width: 100%;
+    padding: $p-3 $p-1;
+    padding-top: $p-6;
+    position: relative;
+    box-shadow: 0 2px 3px $light-background-3;
+    min-height: 100vh;
+    @include flex_center;
+    .hero_container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        .hero_info {
+            margin-bottom: $p-2;
+            @include flex_column;
+            .main_text {
+                margin-bottom: $p-1s;
+                padding: 0 $p-sm;
+                h1 {
+                    font: {
+                        size: $f-xls;
+                        weight: 700;
+                        family: $family-2;
+                    }
+                    text-align: center;
+                    line-height: 40px;
+                    span {
+                        color: $green-2;
+                    }
+                }
+            }
+            .sub_text {
+                margin-bottom: $p-1s;
+                h2 {
+                    font: {
+                        size: $f-sm;
+                        weight: 400;
+                    }
+                    text-align: center;
+                    line-height: 20px;
+                    color: $light-text-2;
+                }
+            }
+            .form {
+                width: 100%;
+                @include flex_center;
+                form {
+                    width: 100%;
+                    max-width: 500px;
+                    input {
+                        width: 100%;
+                        height: 50px;
+                        outline: none;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: $dark-background-shade;
+                        font-size: $f-sm;
+                        padding: $p-sm $p-1;
+                        margin-bottom: $p-sm;
+                    }
+                    button {
+                        @include button;
+                        @include btn($green-2);
+                        color: $dark-text;
+                        height: 45px;
+                        width: 100%;
+                        border-radius: 10px;
+                        font-size: $f-md;
+                        font-weight: 600;
+                        font-family: $family-2;
+                        padding: $p-sm;
+                    }
+                }
+            }
+        }
+        .hero_brands {
+            width: 100%;
+            .brands {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+                .brand {
+                    img {
+                        width: 80px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.darkmode {
+    .hero_container {
+        .hero_info {
+            .main_text {
+                h1 {
+                    span {
+                        color: $green;
+                    }
+                }
+            }
+            .sub_text {
+                h2 {
+                    color: $dark-text-2;
+                }
+            }
+            .form {
+                form {
+                    input {
+                        background-color: $light-background;
+                    }
+                    button {
+                        background-color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 500px) {
+    .hero {
+        padding: $p-3 $p-2;
+        padding-top: $p-6;
+        .hero_container {
+            .hero_info {
+                max-width: 550px;
+                margin: 0 auto;
+                .sub_text {
+                    h2 {
+                        line-height: 22px;
+                    }
+                }
+            }
+            .hero_brands {
+                padding-top: $p-3;
+                .brands {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        padding: $p-3;
+        padding-top: $p-6;
+        .hero_container {
+            .hero_info {
+                max-width: 600px;
+                .main_text {
+                    padding: 0 $p-1;
+                    h1 {
+                        font-size: $f-xxxl;
+                        line-height: 55px;
+                    }
+                }
+                .sub_text {
+                    h2 {
+                        font-size: $f-md;
+                        line-height: 25px;
+                    }
+                }
+                .form {
+                    form {
+                        height: 60px;
+                        height: 60px;
+                        background: $dark-background-shade;
+                        border: none;
+                        padding: 0.2rem;
+                        border-radius: 10px;
+                        @include flex_left;
+                        input {
+                            width: calc(100% - 110px);
+                            height: 100%;
+                            font-size: $f-md;
+                            margin-bottom: 0;
+                            background-color: transparent;
+                        }
+                        button {
+                            width: 110px;
+                            height: 100%;
+                            text-transform: capitalize;
+                            font-weight: 400;
+                            background-color: $green-2;
+                            &:hover {
+                                background-color: $green-shade;
+                                color: $green-2;
+                            }
+                        }
+                    }
+                }
+            }
+            .hero_brands {
+                .brands {
+                    gap: 2rem;
+                    .brand {
+                        img {
+                            width: 120px;
+                            height: 50px;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+    .darkmode {
+        .hero_container {
+            .hero_info {
+                .main_text {
+                    h1 {
+                        span {
+                            color: $green;
+                        }
+                    }
+                }
+                .sub_text {
+                    h2 {
+                        color: $dark-text-2;
+                    }
+                }
+                .form {
+                    form {
+                        background: $light-background;
+                        button {
+                            background-color: $green-2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .hero {
+        .hero_container {
+            .hero_info {
+                max-width: 750px;
+                .main_text {
+                    padding: 0 $p-1;
+                    h1 {
+                        font-size: $f-mega;
+                        line-height: 60px;
+                    }
+                }
+                .sub_text {
+                    padding: 0 $p-2;
+                    margin-bottom: $p-2s;
+                }
+            }
+            .hero_brands {
+                padding-top: $p-5;
+            }
+        }
+    }
+}
