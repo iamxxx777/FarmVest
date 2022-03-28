@@ -16,6 +16,8 @@
 ## Overview
 ![screenshot](https://res.cloudinary.com/hopetomiwa/image/upload/v1648485949/samples/people/FarmVest-dark_pmdn6d.png)
 
+<h2 align="center"></h2>
+
 ![screenshot](https://res.cloudinary.com/hopetomiwa/image/upload/v1648485949/samples/people/FarmVest-white_regdmi.png)
 
 
