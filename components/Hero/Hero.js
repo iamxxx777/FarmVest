@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../themeContext'
 
-import ImImage from 'next/image'
+import Image from 'next/image'
 
 import Elipse from '../Elipse/Elipse'
 import Star from '../Icons/Star'
