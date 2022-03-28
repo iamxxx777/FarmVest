@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../themeContext'
 
+import ImImage from 'next/image'
+
 import Elipse from '../Elipse/Elipse'
 import Star from '../Icons/Star'
 import Star2 from '../Icons/Star2'
@@ -38,11 +40,11 @@ const Hero = () => {
                 </div>
                 <div className={styles.hero_brands}>
                     <div className={styles.brands}>
-                        <div className={styles.brand}><img src={darkMode ? "/marketwatch-dark.svg" : "/marketwatch-dark.svg"} alt="market watch" /></div>
-                        <div className={styles.brand}><img src={darkMode ? "/forbes-dark.svg" : "/forbes.svg"} alt="forbes" /></div>
-                        <div className={styles.brand}><img src={darkMode ? "/business-insider-dark.svg" : "/business-insider.svg"} alt="business insider" /></div>
-                        <div className={styles.brand}><img src={darkMode ? "/fidelity-investments-dark.svg" : "/fidelity-investments.svg"} alt="fidelity investments" /></div>
-                        <div className={styles.brand}><img src={darkMode ? "/wired-dark.svg" : "/wired.svg"} alt="wired" /></div>
+                        <div className={styles.brand}><Image src={darkMode ? "/marketwatch-dark.svg" : "/marketwatch-dark.svg"} alt="market watch" layout="fill" /></div>
+                        <div className={styles.brand}><Image src={darkMode ? "/forbes-dark.svg" : "/forbes.svg"} alt="forbes" layout="fill" /></div>
+                        <div className={styles.brand}><Image src={darkMode ? "/business-insider-dark.svg" : "/business-insider.svg"} alt="business insider" layout="fill" /></div>
+                        <div className={styles.brand}><Image src={darkMode ? "/fidelity-investments-dark.svg" : "/fidelity-investments.svg"} alt="fidelity investments" layout="fill" /></div>
+                        <div className={styles.brand}><Image src={darkMode ? "/wired-dark.svg" : "/wired.svg"} alt="wired" layout="fill" /></div>
                     </div>
                 </div>
                 <Elipse styles={styles} />

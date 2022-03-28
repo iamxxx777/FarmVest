@@ -86,9 +86,11 @@
                 flex-wrap: wrap;
                 gap: 1rem;
                 .brand {
+                    width: 80px;
+                    height: 35px;
+                    position: relative;
                     img {
-                        width: 80px;
-                        height: 35px;
+                        object-fit: contain;
                     }
                 }
             }
@@ -229,10 +231,8 @@
                 .brands {
                     gap: 2rem;
                     .brand {
-                        img {
-                            width: 120px;
-                            height: 50px;
-                        }
+                        width: 120px;
+                        height: 50px;
                     } 
                 }
             }

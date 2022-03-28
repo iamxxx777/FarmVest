@@ -31,11 +31,11 @@ const Header = () => {
             <div className={[styles.scroll, scrolled ? styles.scrolled : null].join(" ")}>
                 <div className={styles.header_container}>
                     <div className={styles.logo}>
-                        <buton>
-                        <Link href="#home">
-                            <h2>FarmVest</h2>
-                        </Link>
-                        </buton>
+                        <button>
+                            <Link href="#home">
+                                <h2>FarmVest</h2>
+                            </Link>
+                        </button>
                     </div>
                     <nav className={styles.links}>
                         <button><Link href='#home'>Home</Link></button>
@@ -44,7 +44,7 @@ const Header = () => {
                         <button><Link href='#faqs'>How it works</Link></button>
                     </nav>
                     <div className={styles.buttons}>
-                        <button className={styles.darkmode_toggle} onClick={setLocalTheme}>{darkMode ? <i className="uil uil-brightness-empty"></i> : <i class="uil uil-bright"></i>}</button>
+                        <button className={styles.darkmode_toggle} onClick={setLocalTheme}>{darkMode ? <i className="uil uil-brightness-empty"></i> : <i className="uil uil-bright"></i>}</button>
                         <button className={styles.mb_hide_i}>Sign In</button>
                         <button className={styles.mb_hide_ii}>Get Started</button>
                         <button className={styles.mb_btn} onClick={() => setDrop(!drop)}>
