@@ -9,7 +9,7 @@ const Star = ({ styles }) => {
     return (
         <div className={styles.star}>
             <Image
-                src={darkMode ? '/star2-dark.svg' : '/star2.svg'}
+                src={darkMode ? '/Star2-dark.svg' : '/Star2.svg'}
                 alt="star filled"
                 width={18}
                 height={18}
