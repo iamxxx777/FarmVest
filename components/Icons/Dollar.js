@@ -9,7 +9,7 @@ const Dollar = ({ styles }) => {
   return (
     <div className={styles.dollar}>
       <Image
-          src={darkMode ? '/icons/doll-dark.svg' : '/icons/doll.svg'}
+          src={darkMode ? '/doll-dark.svg' : '/doll.svg'}
           alt="naira"
           width={20}
           height={20}

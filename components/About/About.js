@@ -27,19 +27,11 @@ const About = () => {
                         <div className={styles.key}>
                             <div className={styles.icon}>
                                 <Image
-                                    src={`/icons/${darkMode ? 'download-dark' : 'download'}.svg`}
+                                    src={`/${darkMode ? 'download-dark' : 'download'}.svg`}
                                     alt='create account'
-                                    width={20}
-                                    height={25}
+                                    width={30}
+                                    height={35}
                                 />
-                                <div className={styles.img}>
-                                    <Image
-                                        src={`/icons/${darkMode ? 'arrow-dark' : 'arrow'}.svg`}
-                                        alt='download'
-                                        width={10}
-                                        height={15}
-                                    />
-                                </div>
                             </div>
                             <div className={styles.text}>
                                 <h2>Download FarmVest</h2>
@@ -49,7 +41,7 @@ const About = () => {
                         <div className={styles.key}>
                             <div className={styles.icon}>
                                 <Image
-                                    src={`/icons/${darkMode ? 'create-dark' : 'create'}.svg`}
+                                    src={`/${darkMode ? 'create-dark' : 'create'}.svg`}
                                     alt='create account'
                                     width={20}
                                     height={25}
@@ -63,7 +55,7 @@ const About = () => {
                         <div className={styles.key}>
                             <div className={styles.icon}>
                                 <Image
-                                    src={`/icons/${darkMode ? 'bank-dark' : 'bank'}.svg`}
+                                    src={`/${darkMode ? 'bank-dark' : 'bank'}.svg`}
                                     alt='Link BVN'
                                     width={20}
                                     height={25}
@@ -77,7 +69,7 @@ const About = () => {
                         <div className={styles.key}>
                             <div className={styles.icon}>
                                 <Image
-                                    src={`/icons/${darkMode ? 'dollar-dark' : 'dollar'}.svg`}
+                                    src={`/${darkMode ? 'dollar-dark' : 'dollar'}.svg`}
                                     alt='start investing'
                                     width={20}
                                     height={25}
@@ -93,7 +85,7 @@ const About = () => {
                 <div className={styles.about_img}>
                     <div className={styles.img_container}>
                         <Image 
-                            src="/image/Pic 1.jpg"
+                            src="/Pic 1.jpg"
                             alt="Male user using farmVest"
                             layout='fill'
                         />

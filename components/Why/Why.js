@@ -61,7 +61,7 @@ const Why = () => {
                 <div className={styles.img}>
                     <div className={styles.img_container}>
                         <Image 
-                            src="/image/Pic 3.jpg"
+                            src="/Pic 3.jpg"
                             alt="Lady on the street using farmVest"
                             layout='fill'
                         />

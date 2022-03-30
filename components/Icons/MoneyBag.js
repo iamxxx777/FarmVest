@@ -9,7 +9,7 @@ const MoneyBag = ({ styles }) => {
   return (
     <div className={styles.bag}>
       <Image
-        src={darkMode ? '/icons/money.svg' : '/icons/money-dark.svg'}
+        src={darkMode ? '/money.svg' : '/money-dark.svg'}
         alt="money bag"
         width={30}
         height={30}

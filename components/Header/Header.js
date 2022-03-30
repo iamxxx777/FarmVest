@@ -31,11 +31,9 @@ const Header = () => {
             <div className={[styles.scroll, scrolled ? styles.scrolled : null].join(" ")}>
                 <div className={styles.header_container}>
                     <div className={styles.logo}>
-                        <button>
-                            <Link href="#home" passHref>
-                                <h2>FarmVest</h2>
-                            </Link>
-                        </button>
+                        <Link href="#home" passHref>
+                            <h2>FarmVest</h2>
+                        </Link>
                     </div>
                     <nav className={styles.links}>
                         <button><Link href='#home'>Home</Link></button>

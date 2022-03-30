@@ -9,7 +9,7 @@ const CircleFilled = ({ styles }) => {
   return (
     <div className={styles.circle_filled}>
         <Image
-            src={darkMode ? '/icons/circle-filled-dark.svg' : '/icons/circle-filled.svg'}
+            src={darkMode ? '/circle-filled-dark.svg' : '/circle-filled.svg'}
             alt="circle filled"
             width={15}
             height={15}

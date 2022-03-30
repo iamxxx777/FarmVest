@@ -20,7 +20,7 @@ const Download = () => {
                     <div className={styles.btns}>
                         <button>
                             <Image 
-                                src="/icons/app-store.svg"
+                                src="/app-store.svg"
                                 alt="Get FarmVest on app store"
                                 width={100}
                                 height={40}
@@ -28,7 +28,7 @@ const Download = () => {
                         </button>
                         <button>
                             <Image 
-                                src="/icons/google-play.svg"
+                                src="/google-play.svg"
                                 alt="Get FarmVest on google play"
                                 width={100}
                                 height={40}

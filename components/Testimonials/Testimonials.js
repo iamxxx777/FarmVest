@@ -27,7 +27,7 @@ const Testimonials = () => {
                     <div className={styles.testimonial}>
                         <div className={styles.img}>
                             <Image 
-                                src="/image/Pic 4.png"
+                                src="/Pic 4.png"
                                 alt="Tonia smart"
                                 layout='fill'
                             />

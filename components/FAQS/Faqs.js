@@ -80,7 +80,7 @@ const Faqs = () => {
                 <div className={styles.img}>
                     <div className={styles.img_container}>
                         <Image 
-                            src="/image/Pic 2.jpg"
+                            src="/Pic 2.jpg"
                             alt="Male on a train using farmVest"
                             layout='fill'
                         />

@@ -9,7 +9,7 @@ const Circle = ({ styles }) => {
   return (
     <div className={styles.circle}>
       <Image
-        src={darkMode ? '/icons/circle-dark.svg' : '/icons/circle.svg'}
+        src={darkMode ? '/circle-dark.svg' : '/circle.svg'}
         alt="circle"
         width={18}
         height={18}
