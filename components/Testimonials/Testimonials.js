@@ -41,7 +41,7 @@ const Testimonials = () => {
                     <div className={styles.testimonial}>
                         <div className={styles.img}>
                             <Image 
-                                src="/image/Pic 5.png"
+                                src="/Pic 5.png"
                                 alt="Grace Obi"
                                 layout='fill'
                             />
