@@ -42,7 +42,7 @@ const Header = () => {
                         <button><Link href='#faqs'>How it works</Link></button>
                     </nav>
                     <div className={styles.buttons}>
-                        <button className={styles.darkmode_toggle} onClick={setLocalTheme}>{darkMode ? <i className="uil uil-brightness-empty"></i> : <i className="uil uil-bright"></i>}</button>
+                        <button className={styles.darkmode_toggle} onClick={setLocalTheme}>{darkMode ? <i class="uil uil-moonset"></i> : <i class="uil uil-brightness"></i>}</button>
                         <button className={styles.mb_hide_i}>Sign In</button>
                         <button className={styles.mb_hide_ii}>Get Started</button>
                         <button className={styles.mb_btn} onClick={() => setDrop(!drop)}>

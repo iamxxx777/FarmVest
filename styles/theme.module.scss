@@ -5,7 +5,7 @@ $dark-background-3: rgba(53, 64, 70, 0.5);
 $dark-background-shade: rgba(38, 50, 56, 0.1);
 
 $dark-text: #FFF;
-$dark-text-2: rgba(255, 255, 255, 0.8);
+$dark-text-2: #eaeaea;
 $dark-text-3: rgba(255, 255, 255, 0.5);
 
 $dark-border: solid 1px rgba(237, 237, 238, 0.2);
@@ -29,23 +29,20 @@ $green-2: #008000;
 $green-shade: rgba(35, 177, 35, 0.1);
 $green-border: 1px solid #008000;
 
-// FONT FAMILY
-$family-1: 'League Spartan', sans-serif;
-$family-2: 'Lato', sans-serif;
 
 // FONT SIZES
-$f-xs: 12px;
-$f-s: 14px;
-$f-sm: 15px;
-$f-md: 16px;
-$f-md-2: 18px;
-$f-lg: 22px;
-$f-xl: 28px;
-$f-xls: 32px;
-$f-xxl: 35px;
-$f-xxxl: 45px;
-$f-mega: 55px;
-$f-mega-2: 70px;
+$f-xs: 0.8rem;
+$f-s: 0.93rem;
+$f-sm: 1rem;
+$f-md: 1.05rem;
+$f-md-2: 1.25rem;
+$f-lg: 1.35rem;
+$f-xl: 1.75rem;
+$f-xls: 2rem;
+$f-xxl: 2.2rem;
+$f-xxxl: 2.85rem;
+$f-mega: 3.2rem;
+$f-mega-2: 4.3rem;
 
 // PADDING
 $p-sm: 0.5rem;

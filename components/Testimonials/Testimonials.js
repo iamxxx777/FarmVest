@@ -14,7 +14,7 @@ const Testimonials = () => {
             <div className={styles.container}>
                 <div className={styles.info}>
                     <div className={styles.main_text}>
-                        <h2>What <span>Customers</span> have to say</h2>
+                        <h2>What our <span>Customers</span> have to say</h2>
                     </div>
                     <div className={styles.sub_text}>
                         <p>

@@ -28,14 +28,16 @@
                 }
                 p {
                     font-size: $f-s;
-                    line-height: 19px;
+                    font-weight: 300;
+                    line-height: 22px;
                 }
             }
             .subscribe {
                 margin-bottom: $p-1;
                 p {
                     font-size: $f-s;
-                    line-height: 19px;
+                    font-weight: 300;
+                    line-height: 22px;
                     margin-bottom: $p-1;
                 }
                 .form {
@@ -68,7 +70,6 @@
                             border-radius: 10px;
                             font-size: $f-md;
                             font-weight: 600;
-                            font-family: $family-2;
                             padding: $p-sm;
                         }
                     }
@@ -110,6 +111,7 @@
                     .num {
                         p {
                             font-size: $f-s;
+                            font-weight: 300;
                         }
                     }
                 }
@@ -123,7 +125,7 @@
                 margin-bottom: $p-1;
                 p {
                     font-size: $f-xs;
-                    font-family: $family-2;
+                    font-weight: 300;
                     text-align: center;
                     color: $light-text-2;
                 }
@@ -136,6 +138,7 @@
                     margin-right: $p-1;
                     margin-bottom: $p-sm;
                     font-size: $f-xs;
+                    font-weight: 300;
                     color: $light-text-2;
                 }
             }
@@ -290,7 +293,7 @@
                 .links {
                     button {
                         font-size: $f-s;
-                        font-weight: 600;
+                        font-weight: 400;
                     }
                 }
             }
